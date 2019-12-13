@@ -1,5 +1,5 @@
 # @material-ui/styles
-#### How to pass props to makeStyles
+## How to pass props to makeStyles
 
 Example 1 - Turn on/off border
 
