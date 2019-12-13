@@ -1,3 +1,48 @@
+# @material-ui/styles
+#### How to pass props to makeStyles
+
+Example 1 - Turn on/off border
+
+```js
+
+const TestPage = () =>{
+ return (
+  <PageHeader
+   title="About"
+   icon={<CloseIcon />}
+   border
+   />
+ )
+}
+```
+
+```js
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles(theme =>({
+  root: {
+    borderBottom: props => props.border ? "1px solid green" : null
+  }
+}));
+
+const PageHeader = (props) =>{
+  const {icon, title, border} = props;
+  const classes = useStyles({border})
+  
+  return (
+    <div className={classes.root}>
+      <h1>{title}</h1>
+    </div>
+  )
+}
+
+
+```
+
+https://material-ui.com/styles/basics/#adapting-based-on-props
+
+
+
 # Flexbox 
 
 The flex container properties are:
