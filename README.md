@@ -10,7 +10,7 @@ const TestPage = () =>{
   <PageHeader
    title="About"
    icon={<CloseIcon />}
-   border //<--- PageHeader has a border props.
+   border //<--- 1. PageHeader has a border props.
    />
  )
 }
@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme =>({
 
 const PageHeader = (props) =>{
   const {icon, title, border, ...rest} = props;
-  const classes = useStyles({border}) //<--- pass border prop to useStyle
+  const classes = useStyles({border}) //<--- 2. Pass "border" props to `useStyle`
   
   return (
     <div className={classes.root}>
