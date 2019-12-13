@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme =>({
 
 const PageHeader = (props) =>{
   const {icon, title, border, ...rest} = props;
-  const classes = useStyles({border})
+  const classes = useStyles({border}) //<--- pass border prop to useStyle
   
   return (
     <div className={classes.root}>
