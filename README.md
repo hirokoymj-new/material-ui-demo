@@ -10,7 +10,7 @@ const TestPage = () =>{
   <PageHeader
    title="About"
    icon={<CloseIcon />}
-   border
+   border //<--- PageHeader has a border props.
    />
  )
 }
